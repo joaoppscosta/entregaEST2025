@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registar Entrega</title>
+</head>
+<body>
+<div>
+    <form method="post" action="/registarEntrega">
+        <div>
+            <label for="remetente">Remetente: </label>
+            <select name="remetente" id="remetente">
+                <option th:each="pessoa : ${pessoas}" th:value="${pessoa.id}" th:text="${pessoa.nome}"> Nome </option>
+            </select>
+        </div>
+
+        <div>
+            <label for="destinatario">Destinatario: </label>
+            <select name="destinatario" id="destinatario">
+                <option th:each="pessoa : ${pessoas}" th:value="${pessoa.id}" th:text="${pessoa.nome}"> Nome </option>
+            </select>
+        </div>
+
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>1 Entrega</title>
+</head>
+<body>
+<div>
+    <div th:text="${entrega.remetente.nome}">Remetente</div>
+    <div th:text="${entrega.destinatario.nome}">Destinatário</div>
+    <div th:text="${entrega.entregue}">Entregue</div>
+</div>
+</body>
+</html>
+
